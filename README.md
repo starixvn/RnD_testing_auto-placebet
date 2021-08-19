@@ -15,7 +15,7 @@ Open downloaded file and install it for your computer
  - StartMemberID (first memberID will be run Ex: 1001015)
  - TotalMemberCount (total member wil be run)
  - GamePage (favorites game page 1 or 2)
- - GameIndex (1,2,3 or All to run all dame)
+ - GameIndex (1,2,3 or All to run all game)
  - Duration (script will be end after ... seconds)
  - DelayBet (milliseconds)
  - Env (l1_local1, l1_local, l1_local2)
