@@ -15,7 +15,7 @@ Open downloaded file and install it for your computer
  - StartMemberID (first memberID will be run Ex: 1001015)
  - TotalMemberCount (total member wil be run, should be 5 or less to prevent high CPU)
  - GamePage (favorites game page 1 or 2)
- - GameIndex (1 <=> Sedie VIP,2 <=> Sedie,3 or All to run all game)
+ - GameIndex (= 1 for Sedie VIP,2 for Sedie,3.. or All to run all game)
  - Duration (script will be end after ... seconds, default 60 seconds)
  - DelayBet (milliseconds, default 300ms)
  - Env (l1_local1, l1_local, l1_local2)
