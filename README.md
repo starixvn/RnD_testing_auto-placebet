@@ -8,7 +8,7 @@ Open downloaded file and install it for your computer
 # Use
  - Open Command Prompt
  - cd existing_folder
- - Run npm i
+ - Run npm i (first-time Installation)
  - Run npm run test
  
 # What are arguments we need prepare for run script on setup.csv
