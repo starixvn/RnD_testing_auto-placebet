@@ -24,12 +24,9 @@ before(async()=> {
     global.duration = (typeof data.Duration !== 'undefined') ? parseInt(data.Duration) : 60
     const DelayBet = (typeof data.DelayBet !== 'undefined') ? parseInt(data.DelayBet) : 300
     global.delayBet = (Number.isNaN(DelayBet)) ? 300 : DelayBet
-    console.log(delayBet)
     global.env = (typeof data.Env !== 'undefined') ? data.Env : 'cf_local1'
     global.expect = expect
     for(let i = 0 ; i < con ; i++){
-        console.log(con)
-        console.log(i)
         const memberId = startMemberID + i
         const browser = await playwright[config.setting.browser].launch({
             headless: config.setting.headless ,

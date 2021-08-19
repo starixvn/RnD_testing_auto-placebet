@@ -28,45 +28,7 @@
         "mocha": "8.1.3",
         "mochawesome": "^6.2.1"
     },
-    "@comment scripts": {
-        "CI_SelGame": [
-            "Run specific game on CI"
-        ],
-        "Win_SelGame": [
-            "Run main test suites of specific game on win OS"
-        ],
-        "Win_SelGameSub": [
-            "Run sub test suites (Database, API, Manage page) of specific game on win OS"
-        ],
-        "full": [
-            "Run all test case in main test suites"
-        ],
-        "smoke": [
-            "Run only smoke test cases in main test suites"
-        ],
-        "p_full": [
-            "Parallel run all test case in main test suites"
-        ],
-        "p_smoke": [
-            "Parrallel run only smoke test cases in main test suites"
-        ],
-        "exportStatus": [
-            "Sync the lastest execution result to google sheet"
-        ],
-        "sendResultToTelegram": [
-            "Send the latest execution result to user via Telegram"
-        ]
-    },
     "scripts": {
-        "CI_SelGame": "cross-var mocha --timeout 0 Games/$npm_config_game/*_Test.js -r @babel/register --file ./Setup.js  --fgrep Full_ --file ./Teardown.js  --reporter mochawesome --reporter-options reportDir=Report ",
-        "Win_SelGame": "cross-var mocha --timeout 0 Games/$npm_config_game/*_Test.js -r @babel/register --file ./Setup.js --file ./Teardown.js  --reporter mochawesome --reporter-options reportDir=Report ",
-        "Win_SelGameSub": "cross-var mocha --timeout 0 Games/$npm_config_game/*_%npm_config_Sub%Test.js -r @babel/register --file ./Setup.js --file ./Teardown.js  --reporter mochawesome --reporter-options reportDir=Report ",
-        "full": "cross-var mocha --timeout 0 Games/**/*_Test.js -r @babel/register --file ./Setup.js --file ./Teardown.js  --reporter mochawesome --reporter-options reportDir=Report ",
-        "smoke": "cross-var mocha --timeout 0 Games/**/*_Test.js  -r @babel/register --fgrep Smoke_ --file ./Setup.js  --file ./Teardown.js  --reporter mochawesome --reporter-options reportDir=Report",
-        "p_full": "cross-var mocha --timeout 0 Games/**/*_Test.js -r @babel/register --require ./configParallel.js Games/**/*_Test.js --parallel -j 2 --reporter mochawesome --require mochawesome/register --reporter-options reportDir=Report ",
-        "p_smoke": "cross-var mocha --timeout 0 Games/**/*_Test.js --fgrep Smoke -r @babel/register --require ./configParallel.js Games/**/*_Test.js --parallel -j 3 --reporter mochawesome --require mochawesome/register --reporter-options reportDir=Report",
-        "exportStatus": "cross-var mocha --timeout 0 Games/MarkTestCase/MarkTestCase.js -r @babel/register",
-        "sendResultToTelegram": "cross-var mocha --timeout 0 Games/SendResultToTelegram/*.js -r @babel/register",
-        "placebet" : "mocha --timeout 0 src/main.js  -r @babel/register --file ./src/Setup.js --file ./src/Teardown.js"
+        "test" : "mocha --timeout 0 src/main.js  -r @babel/register --file ./src/Setup.js --file ./src/Teardown.js"
     }
 }
