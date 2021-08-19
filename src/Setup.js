@@ -24,12 +24,13 @@ before(async()=> {
     global.duration = (typeof data.Duration !== 'undefined') ? parseInt(data.Duration) : 60
     const DelayBet = (typeof data.DelayBet !== 'undefined') ? parseInt(data.DelayBet) : 300
     global.delayBet = (Number.isNaN(DelayBet)) ? 300 : DelayBet
+    let isheadless = (typeof data.Headless !== 'undefined') ? ((data.Headless.toString().toLowerCase().trim() === 'false') ? false : true) : true
     global.env = (typeof data.Env !== 'undefined') ? data.Env : 'cf_local1'
     global.expect = expect
     for(let i = 0 ; i < con ; i++){
         const memberId = startMemberID + i
         const browser = await playwright[config.setting.browser].launch({
-            headless: config.setting.headless ,
+            headless: isheadless ,
             args: ['--disable-dev-shm-usage', '--no-sandbox', '--disable-gpu', '--use-gl=swiftshader','--enable-webgl']
         })
         const context = await browser.newContext({

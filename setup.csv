@@ -1,13 +1,2 @@
-StartMemberID,TotalMemberCount,GamePage,GameIndex,Duration,DelayBet,Env,,,,,,,,
-1001015,5,1,1,60,,l1_local2,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,s
+StartMemberID,TotalMemberCount,GamePage,GameIndex,Duration,DelayBet,Env,Headless
+1001015,3,1,1,60,,l1_local1,TRUE
