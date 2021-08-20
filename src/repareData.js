@@ -1,5 +1,6 @@
 const csv = require('csvtojson')
-const csvFilePath = 'setup.csv'
+const path = require('path')
+const csvFilePath = path.join(__dirname) + path.sep +'setup.csv'
 
 
 export const repareData = async() => {
