@@ -169,8 +169,9 @@ const checkIsExitedGamePage = async(_page)=>{
 
 export const selectGamePages = async() => {
     for(let i = 0 ; i < pages.length ; i++){
+        let idx = (gamePage.toString().toLowerCase().trim() === 'all') ? Math.floor(Math.random() * 2 + 1) : gamePage
         if(await checkIsExitedGamePage(pages[0]) === true){
-            await clickEl(pages[i],`${Locator.CategoryPage}[${gamePage}]`)
+            await clickEl(pages[i],`${Locator.CategoryPage}[${idx}]`)
         }
     }
 }
@@ -183,7 +184,7 @@ export const setRandomChip = async()=> {
 }
 export const randomBet = async()=> {
     for( let i = 0 ; i< pages.length ; i++){
-        let idx = (gameIndex.toString().toLowerCase().trim() === 'all') ? Math.floor(Math.random() * 5 + 1) : gameIndex
+        let idx = (gameIndex.toString().toLowerCase().trim() === 'all') ? Math.floor(Math.random() * 6 + 1) : gameIndex
         let el = await pages[i].$$(Locator.GameContainer[`${idx}`].Choice)
         let rd = Math.floor(Math.random() * el.length)
         await el[rd].click()
