@@ -26,8 +26,8 @@ before(async()=> {
     global.delayBet = (Number.isNaN(DelayBet)) ? 300 : DelayBet
     let isheadless = (typeof data.Headless !== 'undefined') ? ((data.Headless.toString().toLowerCase().trim() === 'false') ? false : true) : true
     global.env = (typeof data.Env !== 'undefined') ? data.Env : 'cf_local1'
-    global.RandomChip = (typeof data.RandomChip !== 'undefined') ? ((data.RandomChip.toString().toLowerCase().trim() === 'true') ? true : false) : false
     global.BetlowOdds = (typeof data.BetLowOdds !== 'undefined') ? ((data.BetLowOdds.toString().toLowerCase().trim() === 'true') ? true : false) : false
+    global.ChipSelected = (typeof data.ChipSelected !== 'undefined') ? data.ChipSelected : "All"
     global.expect = expect
     for(let i = 0 ; i < con ; i++){
         const memberId = Number(startMemberID) + i

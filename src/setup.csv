@@ -1,2 +1,2 @@
-StartMemberID,TotalMemberCount,GamePage,GameIndex,Duration,DelayBet,Env,RandomChip,BetLowOdds,Headless
-101001,2,5,4,300,,l1_local,,TRUE,FALSE
+StartMemberID,TotalMemberCount,GamePage,GameIndex,Duration,DelayBet,Env,ChipSelected,BetLowOdds,Headless
+101001,2,All,ALL,300,,l1_local,500,,FALSE

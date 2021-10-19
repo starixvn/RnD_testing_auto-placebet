@@ -218,6 +218,16 @@ export const setRandomChip = async()=> {
         await selectChip(pages[i],chip[j])
     }
 }
+export const selectChipForAllPage = async() => {
+    if(ChipSelected.toString().toLowerCase().trim() === 'all' || ChipSelected.toString().toLowerCase().trim() === '') {
+        await setRandomChip()
+    } else {
+        for(let i = 0 ; i < pages.length ; i++){
+            await selectChip(pages[i],ChipSelected)
+        }
+    }
+    
+}
 export const randomBet = async()=> {
     for( let i = 0 ; i< pages.length ; i++){
         let elc = await pages[i].$$(Locator.GameContainer.GameContainers)
