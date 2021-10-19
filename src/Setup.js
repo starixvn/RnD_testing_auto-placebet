@@ -30,7 +30,7 @@ before(async()=> {
     global.BetlowOdds = (typeof data.BetLowOdds !== 'undefined') ? ((data.BetLowOdds.toString().toLowerCase().trim() === 'true') ? true : false) : false
     global.expect = expect
     for(let i = 0 ; i < con ; i++){
-        const memberId = startMemberID + i
+        const memberId = Number(startMemberID) + i
         const browser = await playwright[config.setting.browser].launch({
             headless: isheadless ,
             args: ['--disable-dev-shm-usage', '--no-sandbox', '--disable-gpu', '--use-gl=swiftshader','--enable-webgl']

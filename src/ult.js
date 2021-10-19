@@ -11,7 +11,7 @@ export const genUrl = async(_env,_memberId,userAgent) => {
         let resSs = await chai.request(config[_env].proxy).get(`/user/auth/sso?token=${resToken.body.token}&system=2`).set("user-agent",userAgent)
         const obj = JSON.parse(resToken.text);
          await chai.request(config[_env].setBalance).post("/").set('content-type', 'application/x-www-form-urlencoded')
-        .send(`ObCustId=${_memberId}&Balance=20000.00&MinBet=1.00&MaxBet=3000.00&Delay.GetBalance=0&Delay.PlaceBet=0&Delay.EndGame=0&Delay.GetBetLimit=0&ErrorCode.GetBalance=0&ErrorCode.PlaceBet=0&ErrorCode.EndGame=0&ErrorCode.GetBetLimit=0&__RequestVerificationToken=CfDJ8NJR82vR_UtHmvIkoBmdwR7_lNNt0xzsRguQk7UuNpfB2fTbZujU3blCQUcHI3xTLUUFo6343fSnLJvxjm102JfVu6zg_SuILb9CzWy_1Ap3cJFi0_-DY2rid5RftdDxnC_ssGpgRDFS5z5fmy-BryU`)
+        .send(`ObCustId=${_memberId}&Balance=5000000.00&MinBet=1.00&MaxBet=3000.00&Delay.GetBalance=0&Delay.PlaceBet=0&Delay.EndGame=0&Delay.GetBetLimit=0&ErrorCode.GetBalance=0&ErrorCode.PlaceBet=0&ErrorCode.EndGame=0&ErrorCode.GetBetLimit=0&__RequestVerificationToken=CfDJ8NJR82vR_UtHmvIkoBmdwR7_lNNt0xzsRguQk7UuNpfB2fTbZujU3blCQUcHI3xTLUUFo6343fSnLJvxjm102JfVu6zg_SuILb9CzWy_1Ap3cJFi0_-DY2rid5RftdDxnC_ssGpgRDFS5z5fmy-BryU`)
         let _requestChk = {"session": resSs.body.ss, "username": `gamesimulator_${_memberId}`, "browserUserAgent":userAgent}
         let _resCheckAuth = await chai.request(config[_env].proxy).post(`/user/auth/authorize`).set("Content-Type","application/json;charset=UTF-8")
         .set("Origin",config[env].origin).set("User-Agent",userAgent).send(_requestChk)
