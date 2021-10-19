@@ -1,5 +1,5 @@
 export const Locator = {
-    Balance : "[class*='header_balance']",
+    Balance : "[class*='user-info_balance']",
     QuickBet: {
         QuickBet : "//span[contains(@class,'quick-bet-modal_quick-bet-text')]",
         QuickBetAmount: "//div[contains(@class,'quick-bet-modal_group')]/input",
@@ -16,8 +16,29 @@ export const Locator = {
         QuickBetCancel : "button[class*='btn-grey']",
         QuickBetAccept : "button[class*='btn-orange']",
     },
-    CategoryPage : "(//span[contains(@class,'category-page')])",
+    Chip: {
+        Chip1 : "//span[contains(@class,'chip-slider')][text()='1']",
+        Chip5 : "//span[contains(@class,'chip-slider')][text()='5']",
+        Chip10 : "//span[contains(@class,'chip-slider')][text()='10']",
+        Chip50 : "//span[contains(@class,'chip-slider')][text()='50']",
+        Chip100 : "//span[contains(@class,'chip-slider')][text()='100']",
+        Chip200 : "//span[contains(@class,'chip-slider')][text()='200']",
+        Chip500 : "//span[contains(@class,'chip-slider')][text()='500']",
+        Chip1000 : "//span[contains(@class,'chip-slider')][text()='1k']",
+        Chip2000 : "//span[contains(@class,'chip-slider')][text()='2k']",
+        Chip3000 : "//span[contains(@class,'chip-slider')][text()='3k']",
+        ChipSelected : "//div[contains(@class,'chip-slider_selected')]"
+    },
+    ComputedStyle : {
+        QuickBet : {
+            attColor : 'background-image',
+            offColor : 'linear-gradient(90deg, rgb(173, 173, 173), rgb(216, 216, 216) 64.29%)',
+            onColor : 'linear-gradient(90deg, rgb(16, 156, 51), rgb(57, 234, 102) 64.29%)'
+        }
+    },
+    CategoryPage : "(//li[contains(@class,'game-category')])",
     GameContainer : {
+        GameContainers : "(//div[contains(@class,'bet-container')])",
         1 : {
             Choice : "(//div[contains(@class,'bet-container')])[1]//div[contains(@class,'bet-option_container')]"
         },
@@ -35,6 +56,7 @@ export const Locator = {
         }, 
         6 : {
             Choice : "(//div[contains(@class,'bet-container')])[6]//div[contains(@class,'bet-option_container')]"
-        }
+        },
+        Odd : "//div[contains(@class,'bet-option_odd')]"
     }
 }

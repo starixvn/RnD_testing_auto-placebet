@@ -19,5 +19,7 @@ Open downloaded file and install it for your computer
  - Duration (script will be end after ... seconds, default 60 seconds)
  - DelayBet (milliseconds, default 300ms)
  - Env (l1_local1, l1_local, l1_local2)
+ - RandomChip if true, system will change random chip after bet (default = false)
+ - BetLowOdds if true, system will be bet on choice has odd < 1.96 ( default = false ), don't work if GamePage or GameIndex = ALL
  - Headless (default = true)
 
