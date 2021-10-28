@@ -40,22 +40,28 @@ export const Locator = {
     GameContainer : {
         GameContainers : "(//div[contains(@class,'bet-container')])",
         1 : {
-            Choice : "(//div[contains(@class,'bet-container')])[1]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[1]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[1]/..//div[@aria-label='Countdown timer']"
         },
         2 : {
-            Choice : "(//div[contains(@class,'bet-container')])[2]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[2]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[2]/..//div[@aria-label='Countdown timer']"
         },  
         3 : {
-            Choice : "(//div[contains(@class,'bet-container')])[3]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[3]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[3]/..//div[@aria-label='Countdown timer']"
         }, 
         4 : {
-            Choice : "(//div[contains(@class,'bet-container')])[4]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[4]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[4]/..//div[@aria-label='Countdown timer']"
         }, 
         5 : {
-            Choice : "(//div[contains(@class,'bet-container')])[5]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[5]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[5]/..//div[@aria-label='Countdown timer']"
         }, 
         6 : {
-            Choice : "(//div[contains(@class,'bet-container')])[6]//div[contains(@class,'bet-option_container')]"
+            Choice : "(//div[contains(@class,'bet-container')])[6]//div[contains(@class,'bet-option_container')]",
+            Timer : "(//div[contains(@class,'bet-container')])[6]/..//div[@aria-label='Countdown timer']"
         },
         Odd : "//div[contains(@class,'bet-option_odd')]"
     }
