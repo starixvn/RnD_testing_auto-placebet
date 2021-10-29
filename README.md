@@ -6,8 +6,9 @@ Select LTS -> Windows Installer to download
 Open downloaded file and install it for your computer
 ```
 # Use
+ - Download Auto PlaceBet foler to your computer (download as zip and then extract it)
  - Open Command Prompt
- - cd existing_folder
+ - cd Auto PlaceBet (the path of folder Auto PlaceBet in your computer)
  - Run npm i (first-time Installation)
  - Run npm run test
  
