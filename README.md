@@ -11,12 +11,13 @@ Open downloaded file and install it for your computer
  - cd Auto PlaceBet (the path of folder Auto PlaceBet in your computer)
  - Run npm i (first-time Installation)
  - Run npm run test
+ [](https://drive.google.com/file/d/1kAZXZOk-p2oYOXpe8W3Y9tbrgync1axa/view)
  
 # What are arguments we need prepare for run script on setup.csv
  - StartMemberID (first memberID will be run Ex: 1001015)
  - TotalMemberCount (total member wil be run, should be 5 or less to prevent high CPU)
- - GamePage (favorites game page 1 or 2, or All to run random page. Gamepgae starts from 1)
- - GameIndex (= 1 for Sedie VIP,2 for Sedie,3.. or All to run all game. GameIndex starts from 1)
+ - GamePage (Category tab: 1, 2, 3..., or All to run random pages. Gamepage starts from 1, and GamePage bases on UI index)
+ - GameIndex (= 1 for Sedie VIP,2 for Sedie,3.. or All to run all games. GameIndex starts from 1, and game index bases on UI index)
  - Duration (script will be end after ... seconds, default 60 seconds)
  - DelayBet (milliseconds, default 300ms)
  - Env (l1_local1, l1_local, l1_local2)
