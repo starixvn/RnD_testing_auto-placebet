@@ -11,7 +11,7 @@ Open downloaded file and install it for your computer
  - cd Auto PlaceBet (the path of folder Auto PlaceBet in your computer)
  - Run npm i (first-time Installation)
  - Run npm run test
- [](https://drive.google.com/file/d/1kAZXZOk-p2oYOXpe8W3Y9tbrgync1axa/view)
+ [screenshot](https://drive.google.com/file/d/1kAZXZOk-p2oYOXpe8W3Y9tbrgync1axa/view)
  
 # What are arguments we need prepare for run script on setup.csv
  - StartMemberID (first memberID will be run Ex: 1001015)
